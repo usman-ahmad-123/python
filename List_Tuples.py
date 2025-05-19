@@ -1,4 +1,22 @@
-#List built a mutable data type that stores set of values (diff data types)
+# #List → Mutable + Ordered →  collections
+# #Tuple → Immutable + Ordered →  fixed collections
+# #| Feature / Property          |   List                                |   Tuple                          |   Dictionary                          |   Set                                 |
+# #| --------------------------- | ------------------------------------- | -------------------------------- | ------------------------------------- | ------------------------------------- |
+# #|   Definition Syntax         | `[]                                   |  ()                              |  {key: value}                         | `{}` or `set()`                       |
+# #|   Example                   |  [1, 2, 3]                            |  (1, 2, 3)                       |  {'a': 1, 'b': 2}                     | `{1, 2, 3}`                           |
+# #|   Ordered?                  | ✅ Yes (Python 3.7+)                  | ✅ Yes                          | ✅ Yes (Python 3.7+)                  | ❌ No (Unordered collection)           |
+# #|   Mutable?                  | ✅ Yes                                | ❌ No (Immutable)               | ✅ Yes                                 | ✅ Yes                                 |
+# #|   Allows Duplicates?        | ✅ Yes                                | ✅ Yes                          | ✅ Keys: ❌ No <br> Values: ✅ Yes    | ❌ No                                  |
+# #|   Indexing Supported?       | ✅ Yes (`list[0]`)                    | ✅ Yes (`tuple[0]`)             | ✅ Keys act like indexes (`dict['a']`) | ❌ No                                  |
+# #|   Iterable?                 | ✅ Yes                                | ✅ Yes                          | ✅ Yes                                 | ✅ Yes                                 |
+# #|   Use Case                  | Ordered, dynamic items                | Fixed group of values            | Mapping of key-value pairs            | Unique items, set operations          |
+# #|   Methods                   | Many (`append`, `sort`, etc.)         | Few (`count`, `index`)           | Many (`get`, `keys`, `items`, etc.)   | Some (`add`, `union`, `intersection`) |
+# #|   Performance               | Slower than tuple (due to mutability) | Faster than list (immutable)     | Fast lookup by key                    | Fast for membership tests             |
+# #|   Hashable? (Can be key?)   | ❌ No                                  | ✅ Yes (if elements are hashable) | Keys: ✅ Yes (must be hashable)     | ❌ No                                  |
+
+
+
+
 m=94.7
 m1=34
 m2='A'
@@ -69,10 +87,8 @@ else:
   print("not")
 copy_list2 = list2.copy()
 copy_list2.reverse()
-if copy_list2==list2:
-  print("palindromme")
-else:
-  print("not")
+if copy_list2==list2: print("palindromme")
+else: print("not")
 
 #WAP to count the number of student with the "A" grade
 grade=("C","D","A","A","B","B","A")

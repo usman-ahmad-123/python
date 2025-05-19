@@ -57,17 +57,62 @@ a=23
 b=45
 print("or oper: ", (a==b) or (a>b))
 
-#type conversion
-a="2"
-b=4.25
-print(type(a))
-a=int("2")
-print(type(a))
-sum=a+b #2.0+4.25=>6.25
-print(sum)
+# #type conversion(not permanent link type casting)
+# # 
+# | Function   | Converts to | Example                                  |
+# | ---------- | ----------- | ---------------------------------------- |
+# | `int(x)`   | Integer     | `int(3.8)` → `3`                         |
+# | `float(x)` | Float       | `float('5')` → `5.0`                     |
+# | `str(x)`   | String      | `str(12)` → `'12'`                       |
+# | `bool(x)`  | Boolean     | `bool('')` → `False`, `bool(1)` → `True` |
+# | `list(x)`  | List        | `list('abc')` → `['a', 'b', 'c']`        |
 
-# a=float("usman")
-print(a+b)
+print("str to int")
+s = "123"
+n = int(s)
+print(n + 1)   # Output: 124
+
+print("float to int")
+f = 9.81
+i = int(f)
+print(i)   # Output: 9 (fractional part truncated)
+
+print("list to str")
+lst = ['a', 'b', 'c']
+s = ''.join(lst)
+print(s)   # Output: 'abc'
+
+# #Edge cases
+# 
+s = "abc"
+# int(s)  # ValueError: invalid literal for int()
+
+print("Boolean conversion")
+print(bool(""))       # False
+print(bool("Hello"))  # True
+print(bool(0))        # False
+print(bool(42))       # True
+
+print("🔹 Custom Type Conversion (User-defined classes)")
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return f"Person({self.name})"
+
+p = Person("Alice")
+print(str(p))  # Output: Person(Alice)
+
+a = "2"
+b = 4.25
+print(type(a))       # str
+a = int(a)           # now int
+print(type(a))       # int
+print(a + b)         # 6.25
+# Converting float to string
+a = str(a)
+print(type(a))       # str
 
 # a=3.14
 a=str(a)
@@ -88,8 +133,8 @@ marks=float(input("enter marks: "))
 side=float(input("enter sq side: "))
 print("area= ",side**2)  # area*area=area**2
 
-a=int(input("enter a: ",a))
-b=int(input("enter b: ",b))
+a=int(input("enter a: "))
+b=int(input("enter b: "))
 print(a>=b)
 
 
