@@ -97,17 +97,17 @@
 #     print("Not found")
 
 # # using function
-# def ifwordis(tofind):
-#   word=tofind
-#   with open("practice.txt","r") as f:
-#     data=f.read()
-# #   if(data.find(word)!=-1): #or
-#   if(word in data):
-#     print("Found")
-#   else:
-#     print("Not found")
-# ifwordis("learning")
-# ifwordis(input("Enter word to be find: "))
+def ifwordis(tofind):
+  word=tofind
+  with open("practice.txt","r") as f:
+    data=f.read()
+#   if(data.find(word)!=-1): #or
+  if(word in data):
+    print("Found")
+  else:
+    print("Not found")
+ifwordis("learning")
+ifwordis(input("Enter word to be find: "))
 
 # # print line number 
 # def check_for_line(tofind):

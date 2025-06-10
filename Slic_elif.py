@@ -11,7 +11,7 @@
 # | **Alternative**      | Nested `if` (but `elif` is cleaner and more readable)                 |
 
 # # at a glance
-# | Feature      | **Slicing**               | **`elif`**                             |
+# | Feature      | **Slicing                 | **`elif                                |
 # | ------------ | ------------------------- | -------------------------------------- |
 # | Category     | Sequence operation        | Conditional control flow               |
 # | Works on     | Lists, Strings, Tuples    | Any condition inside `if`-`elif` chain |
@@ -60,15 +60,15 @@
 #   print("even")
 
 # greatest of three
-# a=int(input("Enter a: "))
-# b=int(input("Enter b: "))
-# c=int(input("Enter c: "))
-# t=0
-# if t<a:
-#   t=a
-# elif t<b:
-#   t=b
-# elif t<c:
-#   t=c
-#   print(t)
+a=int(input("Enter a: "))
+b=int(input("Enter b: "))
+c=int(input("Enter c: "))
+t=0
+if t<a:
+  t=a
+elif t<b:
+  t=b
+elif t<c:
+  t=c
+  print(t)
 

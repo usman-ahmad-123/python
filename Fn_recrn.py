@@ -71,7 +71,8 @@ def prt_sub(i,list):
   print(list[i])
   prt_sub(i+1,list)
 books=["hist","geo","maths","bio"]
-prt_sub(books)
+i=0
+prt_sub(i,books)
 
 
 

@@ -1,0 +1,2 @@
+Sold 2 units of Product ID 101
+Sold 5 units of Product ID 102

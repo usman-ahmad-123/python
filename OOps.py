@@ -1,35 +1,35 @@
 # # Defin Map with real world scenarios, we started using objects in code.
-# |   OOP Concept              |   Description                                                | **Syntax / Example**                                                             |
-# | -------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-# | **Class                    | Blueprint for creating objects                               | `class Car:`<br>`    def __init__(self, model):`<br>` self.model = model         |
-# | **Object                   | Instance of a class                                          | `my_car = Car("BMW")`                                                            |
-# | **Constructor              | `__init__()` method initializes object attributes            | `def __init__(self, name):`                                                      |
-# | **`self` keyword           | Refers to the current object (instance)                      | `self.name = name`                                                               |
-# | **Attribute                | Variable that belongs to an object/class                     | `self.speed = 100`                                                               |
-# | **Method                   | Function inside a class                                      | `def drive(self): print("Driving")`                                              |
-# |   Encapsulation            | Bundling data & methods; restricts access                    | Use `_protected` or `__private` naming                                           |
-# |   Access Modifiers         | Public, Protected (`_`), Private (`__`)                      | `self.name`, `self._age`, `self.__secret`                                        |
-# |   Inheritance              | One class derives from another                               | `class Dog(Animal):`                                                             |
-# |   Single Inheritance       | One parent class                                             | `class A: ... class B(A): ...`                                                   |
-# |   Multiple Inheritance     | Inherit from multiple classes                                | `class C(A, B):`                                                                 |
-# |   Multilevel Inheritance   | Chain of inheritance                                         | `A → B → C`                                                                      |
-# |   Hierarchical Inheritance | One parent, many children                                    | `class Cat(Animal), class Dog(Animal)`                                           |
-# |   Method Overriding        | Redefining parent method in child class                      | `def speak(self): print("Meow")` in subclass                                     |
-# |   Polymorphism             | Many forms – same interface, different implementations       | `len("abc") → 3`, `len([1,2,3]) → 3`                                             |
-# |   Abstraction              | Hiding implementation details using ABCs                     | Use `abc` module + `@abstractmethod`                                             |
-# |   Class Method             | A method bound to the class not object; uses `@classmethod   | `@classmethod def info(cls):`                                                    |
-# |   Static Method            | A method that doesn’t access class/object; use `@staticmethod| `@staticmethod def greet():`                                                     |
-# |   Instance Method          | Default method, uses `self` to access instance               | `def show(self):`                                                                |
-# |   Destructor               | `__del__()` – cleans up memory (rarely used)                 | `def __del__(self): print("Deleted")`                                            |
-# |    isinstance()            | Check if object is instance of class                         | `isinstance(obj, ClassName)`                                                     |
-# |    issubclass()            | Check if class is derived from another                       | `issubclass(B, A)`                                                               |
+# |   OOP Concept              |   Description                                                |   Syntax / Example                                                      |
+# | -------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------- |
+# | **Class                    | Blueprint for creating objects                               | `class Car:`<br>`    def __init__(self, model):`<br>` self.model = model|
+# | **Object                   | Instance of a class                                          | `my_car = Car("BMW")`                                                   |
+# |   Constructor              | `__init__()` method initializes object attributes            | `def __init__(self, name):`                                             |
+# |   `self` keyword           | Refers to the current object (instance)                      | `self.name = name`                                                      |
+# |   Attribute                | Variable that belongs to an object/class                     | `self.speed = 100`                                                      |
+# |   Method                   | Function inside a class                                      | `def drive(self): print("Driving")`                                     |
+# |   Encapsulation            | Bundling data & methods; restricts access                    | Use `_protected` or `__private` naming                                  |
+# |   Access Modifiers         | Public, Protected (`_`), Private (`__`)                      | `self.name`, `self._age`, `self.__secret`                               |
+# |   Inheritance              | One class derives from another                               | `class Dog(Animal):`                                                    |
+# |   Single Inheritance       | One parent class                                             | `class A: ... class B(A): ...`                                          |
+# |   Multiple Inheritance     | Inherit from multiple classes                                | `class C(A, B):`                                                        |
+# |   Multilevel Inheritance   | Chain of inheritance                                         | `A → B → C`                                                             |
+# |   Hierarchical Inheritance | One parent, many children                                    | `class Cat(Animal), class Dog(Animal)`                                  |
+# |   Method Overriding        | Redefining parent method in child class                      | `def speak(self): print("Meow")` in subclass                            |
+# |   Polymorphism             | Many forms – same interface, different implementations       | `len("abc") → 3`, `len([1,2,3]) → 3`                                    |
+# |   Abstraction              | Hiding implementation details using ABCs                     | Use `abc` module + `@abstractmethod`                                    |
+# |   Class Method             | A method bound to the class not object; uses `@classmethod   | `@classmethod def info(cls):`                                           |
+# |   Static Method            | A method that doesn’t access class/object; use `@staticmethod| `@staticmethod def greet():`                                            |
+# |   Instance Method          | Default method, uses `self` to access instance               | `def show(self):`                                                       |
+# |   Destructor               | `__del__()` – cleans up memory (rarely used)                 | `def __del__(self): print("Deleted")`                                   |
+# |    isinstance()            | Check if object is instance of class                         | `isinstance(obj, ClassName)`                                            |
+# |    issubclass()            | Check if class is derived from another                       | `issubclass(B, A)`                                                      |
 
 
 
 # # Constructors
 class stud:
     college_name="XYZ college" #class attr
-    name="karan"           # class attr
+    name="karan"               #class attr
     #default constructor
     def __init__(self):
         pass
@@ -45,48 +45,48 @@ s2=stud("Arun",97)
 print(s2.name,s2.marks)
 print(stud.college_name)
 
-# class car:
-#   color="blue"
-#   brand="mercedes"
-# c2  = car()
-# print(c2.color)
-# print(c2.brand)
+class car:
+  color="blue"
+  brand="mercedes"
+c2  = car()
+print(c2.color)
+print(c2.brand)
 
-# # Class & Instance Attributes 
-# class stud:
-#    college_name="Apna college"
-#    #create class
-#    def __init__(self,name,marks):
-#        self.name=name
-#        self.marks=marks
-#    def wellcome(self):
-#       print("wellcome stud",self.name)
-#    def get_marks(self):
-#       return self.marks
-#     # creating Object
-# s1=stud("karan",90)
-# s1.wellcome()
-# print(s1.get_marks())
+# Class & Instance Attributes 
+class stud:
+   college_name="Apna college"
+   #create class
+   def __init__(self,name,marks):
+       self.name=name
+       self.marks=marks
+   def wellcome(self):
+      print("wellcome stud",self.name)
+   def get_marks(self):
+      return self.marks
+    # creating Object
+s1=stud("karan",90)
+s1.wellcome()
+print(s1.get_marks())
 
 
-# class stud:
-#   def __init__(self,name,marks):
-#     self.name=name
-#     self.marks=marks
-#   def avg(self):
-#     sum=0
-#     for val in self.marks:
-#       sum+=val
-#     print("hi",self.name,"your avg score is: ",sum/3)
-# # s1=stud("shardha",99)
-# # s2=stud("usm",97)
-# # s3=stud("guru",95)
-# s1=stud("s1 marks",[99,95,97])
-# print(s1.avg())
-# s2=stud("s2 marks",[90,95,92])
-# print(s2.avg())
-# s3=stud("s3 marks",[99,91,97.4])
-# print(s3.avg())
+class stud:
+  def __init__(self,name,marks):
+    self.name=name
+    self.marks=marks
+  def avg(self):
+    sum=0
+    for val in self.marks:
+      sum+=val
+    print("hi",self.name,"your avg score is: ",sum/3)
+# s1=stud("shardha",99)
+# s2=stud("usm",97)
+# s3=stud("guru",95)
+s1=stud("s1 marks",[99,95,97])
+print(s1.avg())
+s2=stud("s2 marks",[90,95,92])
+print(s2.avg())
+s3=stud("s3 marks",[99,91,97.4])
+print(s3.avg())
 
 
 # # Statis method
@@ -111,8 +111,8 @@ print(stud.college_name)
 # print(s3.avg())
 
 
-# #OOPs (Abstraction,Encapsulation,Inheritance,Polymorphism)
-# # Abstraction (hiding the implemntation detail of a class and only showing the essential features to the user.)
+# # #OOPs (Abstraction,Encapsulation,Inheritance,Polymorphism)
+# # # Abstraction (hiding the implemntation detail of a class and only showing the essential features to the user.)
 # class car:
 #   def __init__(self):
 #     self.acc=False
@@ -182,7 +182,6 @@ print(stud.college_name)
 
 # class person:
 #     __name="anonymous"
-
 #     def __hello():
 #         print("hello person !")
 #     def welcome(self):

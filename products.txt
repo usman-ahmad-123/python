@@ -1,0 +1,3 @@
+101,Apple,43
+102,Banana,25
+103,Orange,40

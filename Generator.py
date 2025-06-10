@@ -108,22 +108,22 @@
 
 
 # # 3. representing infinite streams
-# def all_even():
-#   n=0
-#   while True:
-#     yield n
-#     n+=2
-# even_num_gen=all_even()
-# next(even_num_gen)
-# next(even_num_gen)
+def all_even():
+  n=0
+  while True:
+    yield n
+    n+=2
+even_num_gen=all_even()
+next(even_num_gen)
+next(even_num_gen)
 
-# # 4.Chaining gen
-# def fibonacci_numbers(nums):
-#     x, y = 0, 1
-#     for _ in range(nums):
-#         x, y = y, x+y
-#         yield x
-# def square(nums):
-#     for num in nums:
-#         yield num**2
-# print(sum(square(fibonacci_numbers(10))))
+# 4.Chaining gen
+def fibonacci_numbers(nums):
+    x, y = 0, 1
+    for _ in range(nums):
+        x, y = y, x+y
+        yield x
+def square(nums):
+    for num in nums:
+        yield num**2
+print(sum(square(fibonacci_numbers(10))))
